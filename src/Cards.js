@@ -5,6 +5,8 @@ export default function Cards(){
                 <div className="cardsContainer">
                         <Card/>
                         <Card/>
+                        <Card/>
+                        <Card/>
                 </div>
         );
 

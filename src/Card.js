@@ -8,11 +8,11 @@ export default function Card(){
                         <h2>Pergunta</h2>
                         <img src={play}/>
                 </div>
-                <div className="questionBox">
+                <div className="questionBox hidden">
                         <h2>Qual a cor do cavalo Branco de Napoleão?</h2>
                         <img src={turn}/>
                 </div>
-                <div className="answerBox">
+                <div className="answerBox hidden ">
                         <h2>O cavalo Branco de Napoleão era marrom. Branco era o nome do cavalo.</h2>
                         <div className="results">
                                 <p className="red">Não lembrei</p>
