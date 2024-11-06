@@ -1,19 +1,32 @@
+import { useState } from "react";
 import play from "./images/seta_play.png";
-import turn from "./images/seta_virar.png"
+import turn from "./images/seta_virar.png";
+import correct from "./images/icone_certo.png";
+import half from "./images/icone_quase.png";
+import wrong from "./images/icone_erro.png";
 
-export default function Card(){
+export default function Card(props){
+        const [icon, setIcon] = useState("play");
+        const [hideC, setHideC] = useState("cardBox");
+        // const [hideQ, setHideQ] = useState(true);
+        // const [hideA, setHideA] = useState(true);
+
+        function  toggleHideC(){
+                setHideC("cardBox hidden");
+        }
+
         return(
          <div>
-                <div className="cardBox">
+                <div className={hideC}>
                         <h2>Pergunta</h2>
-                        <img src={play}/>
+                        <img src={play} onClick={toggleHideC}/>
                 </div>
-                <div className="questionBox hidden">
-                        <h2>Qual a cor do cavalo Branco de Napoleão?</h2>
+                <div className="questionBox hidden ">
+                        <h2>{props.question}</h2>
                         <img src={turn}/>
                 </div>
                 <div className="answerBox hidden ">
-                        <h2>O cavalo Branco de Napoleão era marrom. Branco era o nome do cavalo.</h2>
+                        <h2>{props.answer}</h2>
                         <div className="results">
                                 <p className="red">Não lembrei</p>
                                 <p className="orange">Quase não <br/> lembrei</p>
