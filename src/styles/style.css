@@ -145,3 +145,8 @@ body{
 .hidden{
         display: none;
 }
+
+.disabled{
+        cursor: default;
+        pointer-events: none;
+}

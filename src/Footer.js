@@ -1,7 +1,7 @@
-export default function Footer(){
+export default function Footer({completedCards, totalCards}){
         return(
                 <div className="footer">
-                        <p>0/4 CONCLUÍDOS</p>
+                        <p>{completedCards}/{totalCards} CONCLUÍDOS</p>
                 </div>
         );
 }
